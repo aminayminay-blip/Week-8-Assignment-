@@ -1,0 +1,39 @@
+
+-- ==========================================
+-- QUESTION 1: CREATING A COMPLETE DATABASE BACKUP
+-- ==========================================
+
+-- Command to back up the sales database:
+-- Run this command in the system terminal, not inside MySQL.
+
+-- mysqldump -u root -p sales > sales_backup.sql
+
+-- Explanation:
+-- mysqldump exports the complete sales database.
+-- -u root specifies the MySQL root username.
+-- -p prompts for the database password.
+-- > saves the backup into sales_backup.sql.
+
+-- Regular backups are important because they protect
+-- data against accidental deletion, system failures,
+-- corruption, and unexpected changes.
+
+
+-- ==========================================
+-- QUESTION 2: BACKING UP ALL DATABASES
+-- ==========================================
+
+-- Command to back up every database:
+-- Run this command in the system terminal.
+
+-- mysqldump -u root -p --all-databases > all_databases_backup.sql
+
+-- Explanation:
+-- --all-databases exports all databases on the server.
+-- -u root specifies the MySQL root username.
+-- -p prompts for the database password.
+-- > saves the backup into all_databases_backup.sql.
+
+-- Backing up all databases before migration ensures
+-- that important databases and their data can be
+-- transferred and restored on the new server.
